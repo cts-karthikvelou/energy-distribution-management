@@ -1,0 +1,39 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #0d1b2a;
+}
+
+/* Cards */
+.card {
+  border-radius: 15px;
+}
+
+/* Dark Buttons */
+.btn-dark {
+  background-color: #1b263b;
+  border: none;
+}
+
+/* ✅ Footer stays at bottom layout fix */
+html, body, #root {
+  height: 100%;
+}
+
+.d-flex.flex-column.min-vh-100 {
+  min-height: 100vh;
+}
+main {
+  padding-top: 80px; /* Space below navbar */
+}
+.hover-effect:hover {
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+

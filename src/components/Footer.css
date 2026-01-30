@@ -1,0 +1,10 @@
+.footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.footer a:hover {
+  color: #00d8ff; /* nice hover color */
+  text-decoration: underline;
+}

@@ -1,0 +1,177 @@
+/* ---------- HERO BANNER ---------- */
+.hero-banner {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  filter: brightness(0.75);
+  border-radius: 0 0 40px 40px;
+  animation: fadeHero 1.2s ease-in-out;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 900;
+  text-shadow: 0 0 15px black;
+  animation: slideDown 1s ease-in-out;
+}
+
+.hero-desc {
+  font-size: 20px;
+  max-width: 700px;
+  text-align: center;
+  animation: fadeIn 1.3s ease-in-out;
+}
+
+/* ---------- GLASS CARD ---------- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeUp 1s ease;
+}
+
+/* ---------- SECTION TITLES ---------- */
+.section-title {
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* ---------- STARS ---------- */
+.star-glow {
+  animation: glowStar 1s infinite alternate ease-in-out;
+}
+
+/* ---------- PROGRESS BARS ---------- */
+.energy-bar {
+  height: 14px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.progress-fill {
+  height: 100%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  color: white;
+  font-weight: 600;
+  transition: width 1.4s ease;
+}
+
+.green-glow {
+  background: #28a745;
+  box-shadow: 0 0 12px #28a745;
+}
+
+.yellow-glow {
+  background: #f4c542;
+  box-shadow: 0 0 12px #f4c542;
+}
+
+/* ---------- LISTS ---------- */
+.styled-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+  background: #28a745;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  background: #1e7e34;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade-up {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeHero {
+  from { opacity: 0; transform: scale(1.08); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glowStar {
+  from { text-shadow: 0 0 5px gold; }
+  to { text-shadow: 0 0 15px gold; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Highlight all cards */
+/* .card { */
+  /* transition: all 0.3s ease; */
+  /* border: 2px solid #28a745; green border for highlight */
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); stronger shadow */
+  /* background-color: #f9fff9; light greenish background */
+/* } */
+
+/* Optional: hover effect for better interactivity */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  border-color: #00c853;
+}
+
+Highlight card headings
+.card h4 {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #28a745;
+  display: inline-block;
+}
+/* Individual card highlights */
+.card-advantages {
+  border-color: #28a745;
+  background-color: #f0fff0;
+}
+
+.card-disadvantages {
+  border-color: #dc3545;
+  background-color: #fff0f0;
+}
+
+.card-examples {
+  border-color: #007bff;
+  background-color: #f0f4ff;
+}
+
