@@ -1,0 +1,34 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Energy_Distribution_Management
+  description: "Energy Distribution Management"
+  annotations:
+    expensetracker.io/appid: EnergyDistributionManagementComponent
+    github.com/project-slug: karthikvelou-cts/energy-distribution-management
+    backstage.io/techdocs-ref: dir:.
+    # flowsource/aws-pipelines: "flowsource-demo-cd-pipeline"
+    flowsource/jenkins-pipelines: "Energy-Distribution-Management-Pipeline"
+    flowsource/jenkins-pipelines-trigger: "Energy-Distribution-Management-Pipeline"
+    flowsource/aws-repo-name: ""
+    flowsource/aws-region: "ap-southeast-2"
+    flowsource/durationInDays: '60'
+    flowsource/aws-project-name: flowsource-demo-v1
+    flowsource/sonarqube-project-key: karthikvelou-cts_energy-distribution-management
+    flowsource/github-repo-owner: karthikvelou-cts
+    flowsource/github-repo-name: energy-distribution-management
+    flowsource/checkmarx-project-id: sonarscan-testing
+    flowsource/blackduck-project-id: sonarscan-testing
+    backstage.io/kubernetes-namespace: sonar-ns
+    backstage.io/kubernetes-label-selector: app=sonarscan-testing
+    flowsource/jira-project-key: EAM
+    flowsource/jira-storypoint-field: 'Story point estimate'
+    flowsource/jira-filter-field-value: ''
+    flowsource/jira-filter-field-key: ''
+    flowsource/jira-enable-current-sprint: 'true'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:catalog-admin
+  providesApis:
+    - sonarscan-testing-api
