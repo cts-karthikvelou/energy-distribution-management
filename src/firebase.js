@@ -3,9 +3,9 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 // Your Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyAHR9VCCABq2Hy2pBc_R6bJH27Lhy1MuDM",
-  authDomain: "solar-energy-ai.firebaseapp.com",
-  projectId: "solar-energy-ai",
+  apiKey: "xxxxxxxxxxxxxxxxxxxx",
+  authDomain: "xxxxxxxxxxxxxxxxx",
+  projectId: "xxxxxxxxx",
   storageBucket: "solar-energy-ai.firebasestorage.app",
   messagingSenderId: "242831992826",
   appId: "1:242831992826:web:a439b698170f578ec1a643",
