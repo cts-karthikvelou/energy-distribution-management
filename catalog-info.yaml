@@ -1,4 +1,13 @@
 apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: energy-management-platform
+  description: "Platform for managing energy assets and optimization"
+spec:
+  owner: group:catalog-admin
+
+---
+apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: Energy_Distribution_Management
