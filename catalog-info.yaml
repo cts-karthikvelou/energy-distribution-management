@@ -34,5 +34,6 @@ spec:
   type: service
   lifecycle: experimental
   owner: group:catalog-admin
+  system: energy-management-platform
   providesApis:
     - sonarscan-testing-api
