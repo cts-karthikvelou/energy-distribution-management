@@ -3,6 +3,10 @@ kind: Component
 metadata:
   name: Energy_Distribution_Management
   description: "Energy Distribution Management"
+  tags:
+    - testing 
+    - sonar 
+    - experimental
   annotations:
     expensetracker.io/appid: EnergyDistributionManagementComponent
     github.com/project-slug: karthikvelou-cts/energy-distribution-management
