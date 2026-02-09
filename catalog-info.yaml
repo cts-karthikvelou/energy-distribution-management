@@ -19,7 +19,7 @@ metadata:
   annotations:
     expensetracker.io/appid: EnergyDistributionManagementComponent
     github.com/project-slug: karthikvelou-cts/energy-distribution-management
-    backstage.io/techdocs-ref: dir:.
+    backstage.io/techdocs-ref: dir:./docs
     # flowsource/aws-pipelines: "flowsource-demo-cd-pipeline"
     flowsource/jenkins-pipelines: "Energy-Distribution-Management-Pipeline"
     flowsource/jenkins-pipelines-trigger: "Energy-Distribution-Management-Pipeline"
