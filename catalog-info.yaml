@@ -27,7 +27,7 @@ metadata:
     flowsource/aws-region: "ap-southeast-2"
     flowsource/durationInDays: '60'
     flowsource/aws-project-name: flowsource-demo-v1
-    flowsource/sonarqube-project-key: karthikvelou-cts_energy-distribution-management
+    flowsource/sonarqube-project-key: energy-distribution-management
     flowsource/github-repo-owner: karthikvelou-cts
     flowsource/github-repo-name: energy-distribution-management
     flowsource/checkmarx-project-id: sonarscan-testing
