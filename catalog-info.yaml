@@ -18,7 +18,7 @@ metadata:
     - experimental
   annotations:
     expensetracker.io/appid: EnergyDistributionManagementComponent
-    github.com/project-slug: karthikvelou-cts/energy-distribution-management
+    github.com/project-slug: cts-karthikvelou/energy-distribution-management
     backstage.io/techdocs-ref: dir:./docs
     # flowsource/aws-pipelines: "flowsource-demo-cd-pipeline"
     flowsource/jenkins-pipelines: "Energy-Distribution-Management-Pipeline"
@@ -28,7 +28,7 @@ metadata:
     flowsource/durationInDays: '60'
     flowsource/aws-project-name: flowsource-demo-v1
     flowsource/sonarqube-project-key: energy-distribution-management
-    flowsource/github-repo-owner: karthikvelou-cts
+    flowsource/github-repo-owner: cts-karthikvelou
     flowsource/github-repo-name: energy-distribution-management
     flowsource/checkmarx-project-id: sonarscan-testing
     flowsource/blackduck-project-id: sonarscan-testing
