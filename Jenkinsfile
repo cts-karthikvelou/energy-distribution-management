@@ -16,13 +16,12 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                // Example: sh 'mvn test'
-            }
+        stage('Test with Coverage') { 
+            steps { 
+                // Run tests with coverage enabled 
+                sh 'npm test -- --coverage' 
+            } 
         }
-
         stage('SonarQube Analysis') {
             steps {
                 script {
@@ -39,7 +38,8 @@ pipeline {
                                 -Dsonar.projectKey=energy-distribution-management \
                                 -Dsonar.sources=. \
                                 -Dsonar.host.url=https://dev.flowsource.next25era.org:447 \
-                                -Dsonar.login=${SQ_TOKEN}
+                                -Dsonar.login=${SQ_TOKEN}\
+                                -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
                             """
                         }
                     }
