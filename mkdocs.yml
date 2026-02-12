@@ -1,4 +1,6 @@
-site_name: Energy Distribution Management Docs
+site_name: Energy Asset Management Docs
 nav:
   - Home: index.md
 docs_dir: docs
+plugins:
+  - techdocs-core

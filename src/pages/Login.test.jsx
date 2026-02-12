@@ -43,15 +43,16 @@ describe('Login Component', () => {
     const passwordInput = screen.getByLabelText(/Password/i);
 
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
-    fireEvent.change(passwordInput, { target: { value: 'password123' } });
+    fireEvent.change(passwordInput, { target: { value: '********' } });
 
     expect(emailInput.value).toBe('test@example.com');
-    expect(passwordInput.value).toBe('password123');
+    expect(passwordInput.value).toBe('********');
   });
 
   test('handles successful login', async () => {
     jest.useFakeTimers();
-    const user = { email: 'test@example.com', password: 'password123', name: 'Test User' };
+    const mockPassword = 'test-password';
+    const user = { email: 'test@example.com', password: mockPassword, name: 'Test User' };
     localStorage.setItem('test@example.com', JSON.stringify(user));
 
     render(
@@ -61,7 +62,7 @@ describe('Login Component', () => {
     );
 
     fireEvent.change(screen.getByLabelText(/Email/i), { target: { value: 'test@example.com' } });
-    fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: 'password123' } });
+    fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: mockPassword } });
     
     fireEvent.click(screen.getByRole('button', { name: /Login/i }));
 
@@ -77,7 +78,8 @@ describe('Login Component', () => {
 
   test('shows error on invalid credentials', async () => {
     jest.useFakeTimers();
-    const user = { email: 'test@example.com', password: 'password123', name: 'Test User' };
+    const mockPassword = 'test-password';
+    const user = { email: 'test@example.com', password: mockPassword, name: 'Test User' };
     localStorage.setItem('test@example.com', JSON.stringify(user));
 
     render(
@@ -121,7 +123,7 @@ describe('Login Component', () => {
     );
 
     fireEvent.change(screen.getByLabelText(/Email/i), { target: { value: 'nonexistent@example.com' } });
-    fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: 'password123' } });
+    fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: 'test-password' } });
     
     fireEvent.click(screen.getByRole('button', { name: /Login/i }));
 

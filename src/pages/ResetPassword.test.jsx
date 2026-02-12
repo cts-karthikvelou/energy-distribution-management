@@ -27,7 +27,7 @@ describe('ResetPassword Component', () => {
   });
 
   test('shows error when passwords do not match', () => {
-    fireEvent.change(screen.getByLabelText(/New Password/i), { target: { value: 'password123' } });
+    fireEvent.change(screen.getByLabelText(/New Password/i), { target: { value: 'test-password' } });
     fireEvent.change(screen.getByLabelText(/Confirm Password/i), { target: { value: 'password456' } });
     fireEvent.click(screen.getByRole('button', { name: /Reset Password/i }));
 
@@ -37,8 +37,9 @@ describe('ResetPassword Component', () => {
 
   test('shows success and navigates when passwords match', async () => {
     jest.useFakeTimers();
-    fireEvent.change(screen.getByLabelText(/New Password/i), { target: { value: 'password123' } });
-    fireEvent.change(screen.getByLabelText(/Confirm Password/i), { target: { value: 'password123' } });
+    const mockPassword = 'test-password';
+    fireEvent.change(screen.getByLabelText(/New Password/i), { target: { value: mockPassword } });
+    fireEvent.change(screen.getByLabelText(/Confirm Password/i), { target: { value: mockPassword } });
     fireEvent.click(screen.getByRole('button', { name: /Reset Password/i }));
 
     expect(screen.getByText(/Password reset successful!/i)).toBeInTheDocument();

@@ -10,7 +10,7 @@ jest.mock('recharts', () => ({
 }));
 
 // Mock global fetch
-global.fetch = jest.fn();
+globalThis.fetch = jest.fn();
 
 describe('DataScience Component', () => {
   test('renders Step 1 initially', () => {
@@ -84,7 +84,7 @@ describe('DataScience Component', () => {
     });
 
     // Mock alert and console.error
-    const alertMock = jest.spyOn(window, 'alert').mockImplementation(() => {});
+    const alertMock = jest.spyOn(globalThis, 'alert').mockImplementation(() => {});
     const consoleErrorMock = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     // Upload file

@@ -3,6 +3,7 @@ import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import NonRenewable from './NonRenewable';
 import '@testing-library/jest-dom';
 
+// eslint-disable-next-line react/prop-types
 const MockNonRenewable = ({ highlightedId = null }) => {
   return (
     <MemoryRouter initialEntries={[{ state: { selectedId: highlightedId } }]}>
@@ -27,23 +28,6 @@ describe('NonRenewable Component', () => {
     expect(screen.getByText('Oil (Petroleum)')).toBeInTheDocument();
   });
 
-  // The search input is commented out in the component.
-  test('filters projects based on search term', () => {
-    // Un-comment the search input in NonRenewable.jsx to make this test pass.
-    /*
-    render(<MockNonRenewable />);
-    const searchInput = screen.getByPlaceholderText(/Search energy types.../i);
-    
-    fireEvent.change(searchInput, { target: { value: 'Coal' } });
-    
-    expect(screen.getByText('Coal Energy')).toBeInTheDocument();
-    expect(screen.queryByText('Oil (Petroleum)')).not.toBeInTheDocument();
-    
-    fireEvent.change(searchInput, { target: { value: '' } });
-    expect(screen.getByText('Oil (Petroleum)')).toBeInTheDocument();
-    */
-    expect(true).toBe(true); // Placeholder assertion
-  });
 
   test('highlights the correct card when highlightedId is provided', () => {
     render(<MockNonRenewable highlightedId={1} />);

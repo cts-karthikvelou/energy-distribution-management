@@ -5,7 +5,9 @@ import '@testing-library/jest-dom';
 
 // Mock Recharts to avoid rendering issues in test environment
 jest.mock('recharts', () => ({
+  // eslint-disable-next-line react/prop-types
   ResponsiveContainer: ({ children }) => <div>{children}</div>,
+  // eslint-disable-next-line react/prop-types
   PieChart: ({ children }) => <div>{children}</div>,
   Pie: () => <div>Pie Chart</div>,
   Tooltip: () => <div>Tooltip</div>,

@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Renewable from './Renewable';
 import '@testing-library/jest-dom';
-// import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import {MemoryRouter, Routes, Route} from 'react-router-dom';
 
+// eslint-disable-next-line react/prop-types
 const MockRenewable = ({ highlightedId = null }) => {
   return (
     <MemoryRouter initialEntries={[{ state: { selectedId: highlightedId } }]}>
@@ -28,27 +28,6 @@ describe('Renewable Component', () => {
     expect(screen.getByText('Wind Energy')).toBeInTheDocument();
   });
 
-  // The search input is commented out in the component.
-  // If it were active, this test would be valid.
-  test('filters projects based on search term', () => {
-    // Un-comment the search input in Renewable.jsx to make this test pass.
-    /*
-    render(<MockRenewable />);
-    const searchInput = screen.getByPlaceholderText(/Search energy types.../i);
-    
-    fireEvent.change(searchInput, { target: { value: 'Solar' } });
-    
-    expect(screen.getByText('Solar Energy')).toBeInTheDocument();
-    expect(screen.queryByText('Wind Energy')).not.toBeInTheDocument();
-    
-    fireEvent.change(searchInput, { target: { value: '' } });
-    expect(screen.getByText('Wind Energy')).toBeInTheDocument();
-    */
-    
-    // Since the input is commented out, we'll just acknowledge this.
-    // We can test the filtering logic if it were extracted into a pure function.
-    expect(true).toBe(true); // Placeholder assertion
-  });
 
   test('highlights the correct card when highlightedId is provided', () => {
     render(<MockRenewable highlightedId={2} />);

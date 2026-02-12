@@ -1,9 +1,6 @@
-// jest.config.js
 module.exports = {
-  rootDir: './',
-  transform: {
-    '^.+\\.[jt]sx?$': 'babel-jest',
-  },
-  moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
-  testEnvironment: 'jsdom',
+  presets: [
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    ['@babel/preset-react', { runtime: 'automatic' }],
+  ],
 };

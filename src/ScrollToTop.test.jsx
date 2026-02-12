@@ -4,7 +4,7 @@ import ScrollToTop from './ScrollToTop';
 import React from 'react';
 
 // Mock window.scrollTo
-global.scrollTo = jest.fn();
+globalThis.scrollTo = jest.fn();
 
 describe('ScrollToTop Component', () => {
   beforeEach(() => {
@@ -21,6 +21,6 @@ describe('ScrollToTop Component', () => {
       </MemoryRouter>
     );
 
-    expect(global.scrollTo).toHaveBeenCalledWith(0, 0);
+    expect(globalThis.scrollTo).toHaveBeenCalledWith(0, 0);
   });
 });

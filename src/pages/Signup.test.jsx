@@ -33,7 +33,7 @@ describe('Signup Component', () => {
     
     fireEvent.change(screen.getByPlaceholderText(/Enter your name/i), { target: { value: 'New User' } });
     fireEvent.change(screen.getByPlaceholderText(/Enter your email/i), { target: { value: 'test@example.com' } });
-    fireEvent.change(screen.getByPlaceholderText(/Enter your password/i), { target: { value: 'password123' } });
+    fireEvent.change(screen.getByPlaceholderText(/Enter your password/i), { target: { value: 'test-password' } });
     
     fireEvent.click(screen.getByRole('button', { name: /Sign Up/i }));
 
@@ -45,7 +45,7 @@ describe('Signup Component', () => {
     jest.useFakeTimers();
     fireEvent.change(screen.getByPlaceholderText(/Enter your name/i), { target: { value: 'New User' } });
     fireEvent.change(screen.getByPlaceholderText(/Enter your email/i), { target: { value: 'new@example.com' } });
-    fireEvent.change(screen.getByPlaceholderText(/Enter your password/i), { target: { value: 'password123' } });
+    fireEvent.change(screen.getByPlaceholderText(/Enter your password/i), { target: { value: 'test-password' } });
     
     fireEvent.click(screen.getByRole('button', { name: /Sign Up/i }));
 

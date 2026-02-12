@@ -1,7 +1,7 @@
-# Project Roadmap: Energy Distribution Management
+# Project Roadmap: Energy Asset Management
 
 ## Vision
-Provide a scalable solution for managing energy distribution, monitoring performance, and enabling predictive analytics.
+Provide a scalable solution for managing energy assets, monitoring performance, and enabling predictive analytics.
 
 ## Current Status
 - Initial project setup completed

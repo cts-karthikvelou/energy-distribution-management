@@ -25,9 +25,12 @@ jest.mock('leaflet', () => ({
 
 // Mock Leaflet components
 jest.mock('react-leaflet', () => ({
+  // eslint-disable-next-line react/prop-types
   MapContainer: ({ children }) => <div>MapContainer {children}</div>,
   TileLayer: () => <div>TileLayer</div>,
+  // eslint-disable-next-line react/prop-types
   Marker: ({ children }) => <div>Marker {children}</div>,
+  // eslint-disable-next-line react/prop-types
   Popup: ({ children }) => <div>Popup {children}</div>,
 }));
 

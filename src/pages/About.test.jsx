@@ -10,7 +10,7 @@ beforeEach(() => {
     unobserve: () => null,
     disconnect: () => null
   });
-  window.IntersectionObserver = mockIntersectionObserver;
+  globalThis.IntersectionObserver = mockIntersectionObserver;
 });
 
 describe('About Component', () => {
