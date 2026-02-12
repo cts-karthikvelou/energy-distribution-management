@@ -113,10 +113,10 @@ pipeline {
                 // Example: sh './deploy.sh'
             }
         }
-        post {
+    }
+     post {
             success { echo 'Pipeline completed successfully!' }
             failure { echo 'Pipeline failed. Please check logs.' }
             always  { archiveArtifacts artifacts: 'dist/**', allowEmptyArchive: true }
       }
-    }
 }
