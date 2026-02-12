@@ -1,16 +1,16 @@
 # Project Roadmap: Energy Distribution Management
 
 ## Vision
-Provide a scalable solution for managing energy distributions, monitoring performance, and enabling predictive analytics.
+Provide a scalable solution for managing energy distribution, monitoring performance, and enabling predictive analytics.
 
 ## Current Status
 - Initial project setup completed
-- Basic modules for distribution registration and monitoring implemented
+- Basic modules for asset registration and monitoring implemented
 
 ## Upcoming Milestones
 ### Q1 2026
 - Implement user authentication and role-based access
-- Add S3 integration for storing distribution data
+- Add S3 integration for storing asset data
 - Improve TechDocs documentation
 
 ### Q2 2026
@@ -20,7 +20,7 @@ Provide a scalable solution for managing energy distributions, monitoring perfor
 
 ### Q3 2026
 - Expand support for IoT device integration
-- Optimize database schema for large-scale distribution data
+- Optimize database schema for large-scale asset data
 - Enhance reporting and export features
 
 ## Long-Term Goals

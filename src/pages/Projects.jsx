@@ -1,15 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import solar from "../assets/Solar Energy.jpg";
-import wind from "../assets/Wind Energy.jpg";
-import hydro from "../assets/Hydro Energy.jpg";
-import biomass from "../assets/Biomass Energy.jpg";
-import ocean from "../assets/Ocean Energy.jpg";
+import solar from "../assets/Solar_Energy.jpg";
+import wind from "../assets/Wind_Energy.jpg";
+import hydro from "../assets/Hydro_Energy.jpg";
+import biomass from "../assets/Biomass_Energy.jpg";
+import ocean from "../assets/Ocean_Energy.jpg";
 import geothermal from "../assets/geothermal.jpg";
 import coal from "../assets/coal.jpg";
 import oil from "../assets/oil.jpg";
 import gas from "../assets/gas.jpg";
-import nuclear from "../assets/Nuclear Energy.jpg";
+import nuclear from "../assets/Nuclear_Energy.jpg";
 import uranium from "../assets/uranium.jpg";
 import minerals from "../assets/Minerals.jpg";
 

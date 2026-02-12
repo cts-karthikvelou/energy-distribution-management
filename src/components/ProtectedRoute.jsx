@@ -1,7 +1,7 @@
 import { Navigate, useLocation } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
-  const loggedIn = localStorage.getItem("userLoggedIn") === "true";
+  const loggedIn = localStorage.getItem("currentUser") !== null;
   const location = useLocation();
 
   if (!loggedIn) {

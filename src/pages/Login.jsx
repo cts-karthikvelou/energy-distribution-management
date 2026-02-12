@@ -104,6 +104,7 @@ const handleSubmit = (e) => {
           {/* Email */}
           <div className="form-floating mb-4 position-relative">
             <input
+              id="email"
               type="email"
               className="form-control rounded-4 ps-5"
               name="email"
@@ -117,13 +118,14 @@ const handleSubmit = (e) => {
                 border: "none",
               }}
             />
-            <label>Email</label>
+            <label htmlFor="email">Email</label>
             <FaEnvelope className="position-absolute top-50 ms-3 translate-middle-y text-white opacity-75" />
           </div>
 
           {/* Password */}
           <div className="form-floating mb-4 position-relative">
             <input
+              id="password"
               type={showPassword ? "text" : "password"}
               className="form-control rounded-4 ps-5"
               name="password"
@@ -137,7 +139,7 @@ const handleSubmit = (e) => {
                 border: "none",
               }}
             />
-            <label>Password</label>
+            <label htmlFor="password">Password</label>
 
             <FaLock className="position-absolute top-50 ms-3 translate-middle-y text-white opacity-75" />
 

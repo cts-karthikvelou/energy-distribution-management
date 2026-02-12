@@ -75,4 +75,19 @@ describe('NonRenewable Component', () => {
     expect(backLink).toBeInTheDocument();
     expect(backLink).toHaveAttribute('href', '/home');
   });
+
+  test('handles hover effects on cards', () => {
+    render(<MockNonRenewable />);
+    
+    const coalCardTitle = screen.getByText('Coal Energy');
+    const card = coalCardTitle.closest('.card');
+
+    fireEvent.mouseEnter(card);
+    expect(card).toHaveStyle('transform: translateY(-10px)');
+    expect(card).toHaveStyle('box-shadow: 0 10px 30px rgba(0,0,0,0.2)');
+
+    fireEvent.mouseLeave(card);
+    expect(card).toHaveStyle('transform: translateY(0)');
+    expect(card).toHaveStyle('box-shadow: 0 5px 15px rgba(0,0,0,0.1)');
+  });
 });

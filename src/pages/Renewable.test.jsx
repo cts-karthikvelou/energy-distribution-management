@@ -80,4 +80,19 @@ describe('Renewable Component', () => {
     expect(backLink).toBeInTheDocument();
     expect(backLink).toHaveAttribute('href', '/Home');
   });
+
+  test('handles hover effects on cards', () => {
+    render(<MockRenewable />);
+    
+    const solarCardTitle = screen.getByText('Solar Energy');
+    const card = solarCardTitle.closest('.card');
+
+    fireEvent.mouseEnter(card);
+    expect(card).toHaveStyle('transform: translateY(-10px)');
+    expect(card).toHaveStyle('box-shadow: 0 10px 30px rgba(0,0,0,0.2)');
+
+    fireEvent.mouseLeave(card);
+    expect(card).toHaveStyle('transform: translateY(0)');
+    expect(card).toHaveStyle('box-shadow: 0 5px 15px rgba(0,0,0,0.1)');
+  });
 });

@@ -8,7 +8,18 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
