@@ -36,7 +36,6 @@ describe('NonRenewable Component', () => {
     const cardDiv = highlightedCardName.closest('.card');
 
     expect(cardDiv).toHaveClass('border-danger', 'shadow-lg');
-    expect(cardDiv).toHaveStyle('transform: scale(1.05)');
     
     const highlightedIndicator = screen.getByText(/Highlighted → Coal Energy/i);
     expect(highlightedIndicator).toBeInTheDocument();
@@ -48,7 +47,6 @@ describe('NonRenewable Component', () => {
     cards.forEach(card => {
       const cardDiv = card.closest('.card');
       expect(cardDiv).not.toHaveClass('border-danger');
-      expect(cardDiv).not.toHaveStyle('transform: scale(1.05)');
     });
     expect(screen.queryByText(/Highlighted →/i)).not.toBeInTheDocument();
   });
@@ -66,12 +64,6 @@ describe('NonRenewable Component', () => {
     const coalCardTitle = screen.getByText('Coal Energy');
     const card = coalCardTitle.closest('.card');
 
-    fireEvent.mouseEnter(card);
-    expect(card).toHaveStyle('transform: translateY(-10px)');
-    expect(card).toHaveStyle('box-shadow: 0 10px 30px rgba(0,0,0,0.2)');
-
-    fireEvent.mouseLeave(card);
-    expect(card).toHaveStyle('transform: translateY(0)');
-    expect(card).toHaveStyle('box-shadow: 0 5px 15px rgba(0,0,0,0.1)');
+    expect(card).toHaveClass('hover-card');
   });
 });

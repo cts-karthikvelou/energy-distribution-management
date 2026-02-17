@@ -106,15 +106,6 @@ const Home = () => {
     []
   );
 
-  const systemFacts = useMemo(
-    () => [
-      { value: "18%", label: "Average grid losses without monitoring" },
-      { value: "92%", label: "User satisfaction after modern retrofits" },
-      { value: "3.5yrs", label: "Typical payback on smart upgrades" },
-    ],
-    []
-  );
-
   return (
     <div className="home">
       <section className="home__hero">
@@ -246,18 +237,14 @@ const Home = () => {
               </figure>
 
               <div className="energy-grid__copy mb-3">
-                <h3
-                  style={{
-                    color:
-                      highlight.id === "renewable"
-                        ? "rgb(0, 128, 0)"
-                        : highlight.id === "nonrenewable"
-                          ? "rgb(220, 0, 0)"
-                          : "inherit",
-                  }}
-                >
+                {(() => {
+                  let color = "inherit";
+                  if (highlight.id === "renewable") color = "rgb(0, 128, 0)";
+                  else if (highlight.id === "nonrenewable") color = "rgb(220, 0, 0)";
+                  return <h3 style={{ color }}>{highlight.heading}</h3>;
+                })()}
+
                   {highlight.heading}
-                </h3>
 
                 <p>{highlight.description}</p>
                 <p>

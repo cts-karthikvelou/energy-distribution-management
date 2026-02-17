@@ -13,7 +13,7 @@ const Renewable = () => {
   const location = useLocation();
   const highlightedId = location.state?.selectedId || null;
 
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm] = useState("");
 
   const renewableProjects = [
     {
@@ -163,22 +163,11 @@ const Renewable = () => {
           {filteredProjects.map((energy) => (
             <div key={energy.id} className="col-md-4">
               <div
-                className={`card h-100 shadow border-0 rounded-4 ${
+                className={`card h-100 shadow border-0 rounded-4 hover-card ${
                   energy.id === highlightedId ? "border border-3 border-success shadow-lg" : ""
                 }`}
                 style={{
                   overflow: "hidden",
-                  transition: "all 0.3s",
-                  cursor: "pointer",
-                  transform: energy.id === highlightedId ? "scale(1.05)" : "scale(1)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "translateY(-10px)";
-                  e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.2)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "0 5px 15px rgba(0,0,0,0.1)";
                 }}
               >
                 <img

@@ -63,7 +63,7 @@ describe('Login Component', () => {
 
     fireEvent.change(screen.getByLabelText(/Email/i), { target: { value: 'test@example.com' } });
     fireEvent.change(screen.getByLabelText(/Password/i), { target: { value: mockPassword } });
-    
+
     fireEvent.click(screen.getByRole('button', { name: /Login/i }));
 
     expect(screen.getByText(/Login Successful!/i)).toBeInTheDocument();
@@ -109,9 +109,9 @@ describe('Login Component', () => {
         <Login />
       </MemoryRouter>
     );
-    
-    fireEvent.click(screen.getByText(/Signup/i));
-    expect(mockNavigate).toHaveBeenCalledWith('/signup');
+
+    const signupLink = screen.getByText(/Signup/i);
+    expect(signupLink.closest('a')).toHaveAttribute('href', '/signup');
   });
 
   test('shows error when user does not exist', async () => {
