@@ -1,4 +1,4 @@
-site_name: Energy Asset Management Docs
+site_name: Energy Distribution Management Docs
 nav:
   - Home: index.md
 docs_dir: docs
