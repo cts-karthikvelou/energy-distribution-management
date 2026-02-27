@@ -44,8 +44,9 @@ const ForgotPassword = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="form-label fw-semibold">Email address</label>
+            <label htmlFor="email" className="form-label fw-semibold">Email address</label>
             <input
+              id="email"
               type="email"
               className="form-control"
               placeholder="Enter your registered email"

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/DetailsPage.css";
 
@@ -13,12 +13,6 @@ const DetailsPage = () => {
   const location = useLocation();
   const energy = location.state?.energy;
   const backPage = location.state?.backPage || "/";
-
-  const [animateBars, setAnimateBars] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setAnimateBars(true), 300);
-  }, []);
 
   if (!energy) {
     return (
@@ -182,8 +176,8 @@ const DetailsPage = () => {
           <div className="card shadow rounded-4 p-4 h-100 card-advantages">
             <h4 className="fw-bold text-success">Advantages</h4>
             <ul className="mt-3">
-              {energy.advantages?.map((adv, index) => (
-                <li key={index}>{adv}</li>
+              {energy.advantages?.map((adv) => (
+                <li key={adv}>{adv}</li>
               ))}
             </ul>
           </div>
@@ -193,8 +187,8 @@ const DetailsPage = () => {
           <div className="card shadow rounded-4 p-4 h-100 card-disadvantages">
             <h4 className="fw-bold text-danger">Disadvantages</h4>
             <ul className="mt-3">
-              {energy.disadvantages?.map((dis, index) => (
-                <li key={index}>{dis}</li>
+              {energy.disadvantages?.map((dis) => (
+                <li key={dis}>{dis}</li>
               ))}
             </ul>
           </div>
@@ -204,8 +198,8 @@ const DetailsPage = () => {
           <div className="card shadow rounded-4 p-4 h-100 card-examples">
             <h4 className="fw-bold text-primary">Real-World Examples</h4>
             <ul className="mt-3">
-              {energy.examples?.map((ex, index) => (
-                <li key={index}>{ex}</li>
+              {energy.examples?.map((ex) => (
+                <li key={ex}>{ex}</li>
               ))}
             </ul>
           </div>

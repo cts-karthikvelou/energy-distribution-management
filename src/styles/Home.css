@@ -389,11 +389,6 @@
   padding-right: 40px;
 }
 
-.solution-grid {
-  display: grid;
-  gap: 1.75rem;
-}
-
 .solution-grid__item {
   padding: clamp(1.75rem, 3vw, 2.25rem);
   background: rgba(255, 255, 255, 0.65);
@@ -403,6 +398,9 @@
   gap: 1rem;
   box-shadow: var(--shadow-soft);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  padding-top: 5px;       /* optional: reduces space inside each card */
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 .solution-grid__item:hover {
@@ -609,9 +607,6 @@
     margin: 0 auto;
   }
 }
-.energy-section {
-  margin-bottom: 80px; /* increase or decrease as you like */
-}
 @media (min-width: 1024px) {
   .home__hero {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
@@ -641,6 +636,8 @@
 .section--approach {
   padding-top: 10px !important;     /* reduce huge gap */
   margin-top: 0 !important;
+  margin-top: -40px !important;   /* pulls it up slightly */
+  margin-bottom: -110px !important;   
 }
 .energy-section {
   margin-bottom: 10px !important;
@@ -649,12 +646,7 @@
 .section {
   padding-top: 40px !important;     /* was likely 80–120px */
   padding-bottom: 40px !important;  /* smooth spacing */
-}
-
-/* Specific fix for the big gap before "About Our Approach" */
-.section--approach {
-  margin-top: -40px !important;   /* pulls it up slightly */
-  margin-bottom: -110px !important;   
+  position: relative;
 }
 
 /* Reduce space before About Our Approach section */
@@ -698,12 +690,12 @@
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .energy-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .energy-card__icon {
@@ -732,12 +724,8 @@
 
 .solution-grid {
   margin-top: 5px;        /* reduces space above solution cards */
-  gap: 15px;              /* smaller spacing between cards */
-}
-
-.solution-grid__item {
-  padding-top: 5px;       /* optional: reduces space inside each card */
-  padding-bottom: 5px;
+  gap: 15px;
+  display: grid;
 }
 
 
@@ -776,12 +764,3 @@
     transform: translateY(0);
   }
 }
-.energy-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.energy-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-

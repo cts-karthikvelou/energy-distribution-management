@@ -1,16 +1,14 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 // 🔥 Firebase Imports
-import { auth, provider, signInWithPopup } from "../firebase";
+// import { auth, provider, signInWithPopup } from "../firebase";
 
 import {
   FaEnvelope,
   FaLock,
   FaEye,
   FaEyeSlash,
-  FaGoogle,
-  FaFacebook,
 } from "react-icons/fa";
 
 const Login = () => {
@@ -22,31 +20,31 @@ const Login = () => {
   // ------------------------------------------------
   // ✅ REAL GOOGLE LOGIN
   // ------------------------------------------------
-  const googleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-
-      const user = result.user;
-
-      setAlert({ type: "success", message: "Google Login Successful!" });
-
-      // Save user
-      localStorage.setItem("currentUser", JSON.stringify(user));
-
-      setTimeout(() => navigate("/home"), 1500);
-    } catch (error) {
-      console.log("GOOGLE LOGIN ERROR =>",error);
-      setAlert({ type: "danger", message: "Google Login Failed!" });
-      setAlert({ type: "danger", message: error.message });
-    }
-  };
+  // const googleLogin = async () => {
+  //   try {
+  //     const result = await signInWithPopup(auth, provider);
+  //
+  //     const user = result.user;
+  //
+  //     setAlert({ type: "success", message: "Google Login Successful!" });
+  //
+  //     // Save user
+  //     localStorage.setItem("currentUser", JSON.stringify(user));
+  //
+  //     setTimeout(() => navigate("/home"), 1500);
+  //   } catch (error) {
+  //     console.log("GOOGLE LOGIN ERROR =>",error);
+  //     setAlert({ type: "danger", message: "Google Login Failed!" });
+  //     setAlert({ type: "danger", message: error.message });
+  //   }
+  // };
 
   // ------------------------------------------------
   // ❌ Facebook Login – not setup yet
   // ------------------------------------------------
-  const facebookLogin = () => {
-    alert("Facebook login not enabled yet!");
-  };
+  // const facebookLogin = () => {
+  //   alert("Facebook login not enabled yet!");
+  // };
 
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -143,18 +141,21 @@ const handleSubmit = (e) => {
 
             <FaLock className="position-absolute top-50 ms-3 translate-middle-y text-white opacity-75" />
 
-            <span
+            <button
+              type="button"
               onClick={() => setShowPassword(!showPassword)}
               style={{
                 position: "absolute",
                 right: "15px",
                 top: "50%",
                 transform: "translateY(-50%)",
-                cursor: "pointer",
+                background: "none",
+                border: "none",
+                color: "white",
               }}
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </span>
+            </button>
           </div>
 
           <button
@@ -196,12 +197,12 @@ const handleSubmit = (e) => {
 
         <p className="text-center mt-4">
           Don’t have an account?{" "}
-          <span
-            onClick={() => navigate("/signup")}
+          <Link
+            to="/signup"
             style={{ cursor: "pointer", fontWeight: "bold" }}
           >
             Signup
-          </span>
+          </Link>
         </p>
       </div>
 

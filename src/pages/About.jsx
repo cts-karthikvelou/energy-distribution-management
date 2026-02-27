@@ -189,8 +189,8 @@ const About = () => {
               title: "Collaboration",
               text: "Together, we build a greener future.",
             },
-          ].map((value, idx) => (
-            <div className="col-md-3" key={idx}>
+          ].map((value) => (
+            <div className="col-md-3" key={value.title}>
               <div
                 className="p-4 rounded-4 shadow-sm h-100"
                 style={{
@@ -218,8 +218,8 @@ const About = () => {
             { img: team1Img, name: "Naveen", role: "Data Scientist" },
             { img: team3Img, name: "Maneesha", role: "Full Stack Developer" },
             { img: team2Img, name: "Aishwarya", role: "Data Scientist" },
-          ].map((team, idx) => (
-            <div className="col-md-3" key={idx}>
+          ].map((team) => (
+            <div className="col-md-3" key={team.name}>
               <div
                 className="p-4 rounded-4 shadow-sm"
                 style={{
