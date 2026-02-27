@@ -34,12 +34,12 @@ const ResetPassword = () => {
 
         <form onSubmit={handleReset}>
           <div className="mb-3">
-            <label className="form-label fw-semibold">New Password</label>
-            <input type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <label htmlFor="newPassword" className="form-label fw-semibold">New Password</label>
+            <input id="newPassword" type="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
           <div className="mb-3">
-            <label className="form-label fw-semibold">Confirm Password</label>
-            <input type="password" className="form-control" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+            <label htmlFor="confirmPassword" className="form-label fw-semibold">Confirm Password</label>
+            <input id="confirmPassword" type="password" className="form-control" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
           </div>
           <div className="d-grid mb-2">
             <button type="submit" className="btn btn-success fw-semibold py-2">Reset Password</button>

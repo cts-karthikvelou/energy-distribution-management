@@ -150,8 +150,9 @@ const DataScience = () => {
           <div className="row g-4">
             {/* left Form */}
             <div className="col-md-6">
-              <label className="fw-bold mb-1">📍 Location</label>
+              <label htmlFor="location" className="fw-bold mb-1">📍 Location</label>
               <select
+                id="location"
                 className="form-select p-3 shadow-sm mb-3"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
@@ -164,8 +165,9 @@ const DataScience = () => {
                 <option>Solar Plant</option>
               </select>
 
-              <label className="fw-bold mb-1">⚡ System Capacity (kW)</label>
+              <label htmlFor="capacity" className="fw-bold mb-1">⚡ System Capacity (kW)</label>
               <input
+                id="capacity"
                 type="number"
                 className="form-control p-3 shadow-sm mb-3"
                 value={capacity}
@@ -173,8 +175,9 @@ const DataScience = () => {
                 style={{ borderRadius: "14px" }}
               />
 
-              <label className="fw-bold mb-1">🌞 Sun Hours</label>
+              <label htmlFor="sunHours" className="fw-bold mb-1">🌞 Sun Hours</label>
               <input
+                id="sunHours"
                 type="number"
                 className="form-control p-3 shadow-sm mb-3"
                 value={sunHours}
@@ -182,7 +185,7 @@ const DataScience = () => {
                 style={{ borderRadius: "14px" }}
               />
 
-              <label className="fw-bold mb-2">🖼 Upload Image</label>
+              <label htmlFor="fileInput" className="fw-bold mb-2">🖼 Upload Image</label>
               <div
                 className="d-flex align-items-center p-2 shadow-sm mb-4"
                 style={{
@@ -194,6 +197,7 @@ const DataScience = () => {
                 }}
               >
                 <input
+                  id="fileInput"
                   type="file"
                   onChange={handleFileChange}
                   style={{ position: "absolute", inset: 0, opacity: 0 }}

@@ -126,8 +126,9 @@ const Contact = () => {
 
   <form onSubmit={handleSubmit}>
     <div className="mb-3">
-      <label className="form-label fw-semibold">Your Name</label>
+      <label htmlFor="name" className="form-label fw-semibold">Your Name</label>
       <input
+        id="name"
         type="text"
         className="form-control form-control-lg rounded-3"
         name="name"
@@ -138,8 +139,9 @@ const Contact = () => {
     </div>
 
     <div className="mb-3">
-      <label className="form-label fw-semibold">Your Email</label>
+      <label htmlFor="email" className="form-label fw-semibold">Your Email</label>
       <input
+        id="email"
         type="email"
         className="form-control form-control-lg rounded-3"
         name="email"
@@ -150,8 +152,9 @@ const Contact = () => {
     </div>
 
     <div className="mb-3">
-      <label className="form-label fw-semibold">Message</label>
+      <label htmlFor="message" className="form-label fw-semibold">Message</label>
       <textarea
+        id="message"
         className="form-control form-control-lg rounded-3"
         rows="5"
         name="message"

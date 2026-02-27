@@ -84,6 +84,7 @@
 
 .yellow-glow {
   background: #f4c542;
+  color: #333;
   box-shadow: 0 0 12px #f4c542;
 }
 
@@ -138,22 +139,7 @@
   from { opacity: 0; }
   to { opacity: 1; }
 }
-/* Highlight all cards */
-/* .card { */
-  /* transition: all 0.3s ease; */
-  /* border: 2px solid #28a745; green border for highlight */
-  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); stronger shadow */
-  /* background-color: #f9fff9; light greenish background */
-/* } */
-
-/* Optional: hover effect for better interactivity */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-  border-color: #00c853;
-}
-
-Highlight card headings
+/* Highlight card headings */
 .card h4 {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #28a745;
@@ -174,4 +160,3 @@ Highlight card headings
   border-color: #007bff;
   background-color: #f0f4ff;
 }
-
